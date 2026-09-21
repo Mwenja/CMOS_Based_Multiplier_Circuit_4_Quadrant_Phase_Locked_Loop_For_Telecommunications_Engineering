@@ -1,0 +1,2 @@
+# CMOS_Based_Multiplier_Circuit_4_Quadrant_Phase_Locked_Loop_For_Telecommunications_Engineering
+To Design a Multiplier Circuit that uses a 4 Quadrant multiplier,where the input and output signals are fully differential and require a positive and negative component.The Widths W are chosen smallest for speed,that would sink a nominal bias current of 50uA .In this circuit,M1-4 each will nominally sink around 12.5uA sufficiently.
