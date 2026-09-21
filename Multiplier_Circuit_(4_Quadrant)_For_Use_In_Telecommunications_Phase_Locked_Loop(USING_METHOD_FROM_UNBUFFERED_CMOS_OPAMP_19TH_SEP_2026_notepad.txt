@@ -1,0 +1,1 @@
+To Simulate in a browser,open the .asc file in this repo,click Raw,copy te text and paste it into an online circuit simulator like CircuitJS

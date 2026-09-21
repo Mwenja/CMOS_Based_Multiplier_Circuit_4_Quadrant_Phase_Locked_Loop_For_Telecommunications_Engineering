@@ -1,0 +1,38 @@
+* C:\Users\andre\OneDrive\Documents\LTspiceXVII\Multiplier_Circuit_(4_Quadrant)_For_Use_In_Telecommunications_Phase_Locked_Loop(USING_METHOD_FROM_UNBUFFERED_CMOS_OPAMP_19TH_SEP_2026.asc
+M1 Vop V1p N001 N001 NMOS
+M2 Vom V1m N001 N001 NMOS
+M3 Vom V1p N002 N002 NMOS
+M4 N001 V2p N003 N003 NMOS
+M5 N002 V2m N003 N003 NMOS
+R1 VDD Vom 10k
+R2 VDD Vop 10k
+I1 N003 0 50µ
+M6 Vop V1m N002 N002 NMOS
+Vcm1 N006 0 0V
+Vcm2 N007 0 0V
+Vps1 VDD 0 15V
+Vcm3 N004 0 0V
+Vcm4 N005 0 0V
+EV1 V1p N006 VD1 0 0.5V
+EV2 V1m N007 VD1 0 -0.5V
+EV3 V2p N004 VD2 0 0.5V
+EV4 V2m N005 VD2 0 -0.5V
+Vd1 VD1 0 SINE(0V 1V 1k)
+Vd2 VD2 0 PULSE(1V 0 0 0 0 4.25ms 8.5ms)
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\andre\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.mos
+* l=1u w=0.25u
+* l=1u w=0.25u
+* l=1u w=0.25u
+* l=1u w=0.25u
+.model NMOS NMOS(kp=200u Vt0=0.7 W=0.25u L=1u)
+* Multiplier Circuti ( Four Quadrant) For Use In Telecommunications Engineering Phase Locked Loops (PLLs)\nUSING METHOD FROM PRINTED SCHEMATIC 'CMOS 2 STAGE OPAMP UNBUFFERED OP AMP DESIGN SUMMARY\nAndrew Miingi\nSunday 20th September 2026
+.tran 0 20ms 0 2ms
+;op
+* l=1u w=0.25u
+* l=1u w=0.25u
+* Note:\nV1p and V1m are sine waves (INPUT DATA)\nV2p and V2m are square waves ( pulses) (FROM VOLTAGE CONTROllED OSCILLATOR)
+* --- Operating Point ---\n \nV(vop):          14.75           voltage\nV(v1p):          0               voltage\nV(n001):         -1.53435        voltage\nV(vom):          14.75           voltage\nV(v1m):          0               voltage\nV(n002):         -1.25123        voltage\nV(v2p):          0.5             voltage\nV(n003):         -1.98123        voltage\nV(v2m):          -0.5            voltage\nV(vdd):          15              voltage\nV(n006):         0               voltage\nV(n007):         0               voltage\nV(n004):         0               voltage\nV(n005):         0               voltage\nV(vd1):          0               voltage\nV(vd2):          1               voltage\nId(M3):          7.59632e-006    device_current\nIg(M3):          0               device_current\nIb(M3):          -1.60112e-011   device_current\nIs(M3):          -7.5963e-006    device_current\nId(M6):          1.51926e-005    device_current\nIg(M6):          0               device_current\nIb(M6):          -7.40007e-013   device_current\nIs(M6):          -1.51926e-005   device_current\nId(M5):          3.48074e-005    device_current\nIg(M5):          0               device_current\nIb(M5):          -4.56881e-013   device_current\nIs(M5):          -3.48074e-005   device_current\nId(M4):          7.59632e-006    device_current\nIg(M4):          0               device_current\nIb(M4):          -1.60112e-011   device_current\nIs(M4):          -7.5963e-006    device_current\nId(M2):          1.74037e-005    device_current\nIg(M2):          0               device_current\nIb(M2):          -1.62944e-011   device_current\nIs(M2):          -1.74037e-005   device_current\nId(M1):          1.74037e-005    device_current\nIg(M1):          0               device_current\nIb(M1):          -1.62944e-011   device_current\nIs(M1):          -1.74037e-005   device_current\nI(I1):           5e-005          device_current\nI(R2):           2.5e-005        device_current\nI(R1):           2.5e-005        device_current\nI(Ev4):          0               device_current\nI(Ev3):          0               device_current\nI(Ev2):          0               device_current\nI(Ev1):          0               device_current\nI(Vd2):          0               device_current\nI(Vd1):          0               device_current\nI(Vcm9):         0               device_current\nI(Vcm7):         0               device_current\nI(Vps1):         -5e-005         device_current\nI(Vcm4):         0               device_current\nI(Vcm3):         0               device_current
+.backanno
+.end
